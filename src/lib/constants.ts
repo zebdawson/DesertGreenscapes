@@ -27,26 +27,32 @@ export const BUSINESS_INFO = {
 };
 
 // Team Members
-export const TEAM = [
+export const TEAM_MEMBERS = [
   {
     name: 'Steve Hofsaess',
-    role: 'Owner',
-    bio: 'With over 30 years of experience in Las Vegas landscaping, Steve has transformed thousands of outdoor spaces.',
+    role: 'Owner & Founder',
+    bio: 'With over 30 years of experience in Las Vegas landscaping, Steve has built Desert Greenscapes into one of Southern Nevada\'s most trusted names in outdoor transformations. His commitment to quality and customer satisfaction has earned the company an impeccable reputation.',
+    specialties: ['Artificial Turf', 'Project Management', 'Customer Relations', 'SNWA Rebates'],
     image: '/images/team/steve.jpg' // Placeholder
   },
   {
     name: 'Pedro',
-    role: 'Partner',
-    bio: 'Bilingual expert specializing in custom installations and client relations.',
+    role: 'Lead Installer & Partner',
+    bio: 'Pedro brings decades of hands-on experience and bilingual expertise to every project. His meticulous attention to detail and dedication to craftsmanship ensure every installation exceeds expectations. Fluent in English and Spanish, Pedro connects with our diverse Las Vegas community.',
+    specialties: ['Artificial Turf Installation', 'Custom Designs', 'Spanish Translation', 'Quality Control'],
     image: '/images/team/pedro.jpg' // Placeholder
   },
   {
     name: 'George',
-    role: 'Partner',
-    bio: 'Master craftsman with expertise in waterfalls and hardscape installations.',
+    role: 'Operations Manager & Partner',
+    bio: 'George is a true artisan with over 30 years of experience in custom waterfalls, hardscaping, and complex installations. His ability to bring creative visions to life while managing projects efficiently makes him invaluable to the Desert Greenscapes team.',
+    specialties: ['Waterfall Construction', 'Paver Installation', 'Operations', 'Hardscape Design'],
     image: '/images/team/george.jpg' // Placeholder
   }
 ];
+
+// Legacy export for backward compatibility
+export const TEAM = TEAM_MEMBERS;
 
 // Service Areas
 export const SERVICE_AREAS = [
