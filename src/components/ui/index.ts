@@ -6,3 +6,5 @@ export { default as Section } from './Section';
 export { default as VideoPlayer } from './VideoPlayer';
 export { default as BeforeAfterSlider } from './BeforeAfterSlider';
 export { default as PlaceholderImage } from './PlaceholderImage';
+export { default as ProjectCard } from './ProjectCard';
+export { default as FAQ } from './FAQ';
