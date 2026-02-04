@@ -3,3 +3,6 @@ export { default as Card, CardHeader, CardTitle, CardDescription, CardContent, C
 export { default as Badge } from './Badge';
 export { default as Container } from './Container';
 export { default as Section } from './Section';
+export { default as VideoPlayer } from './VideoPlayer';
+export { default as BeforeAfterSlider } from './BeforeAfterSlider';
+export { default as PlaceholderImage } from './PlaceholderImage';

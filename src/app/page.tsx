@@ -1,8 +1,11 @@
 import {
-  Hero,
+  HeroVideo,
   SNWARebateBanner,
+  VideoShowcase,
   ServicesGrid,
+  BeforeAfterShowcase,
   WhyChooseUs,
+  LasVegasExperts,
   ProcessSteps,
   Testimonials,
 } from '@/components/sections';
@@ -10,10 +13,13 @@ import {
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HeroVideo />
       <SNWARebateBanner />
+      <VideoShowcase />
       <ServicesGrid />
+      <BeforeAfterShowcase />
       <WhyChooseUs />
+      <LasVegasExperts />
       <ProcessSteps />
       <Testimonials />
     </>
