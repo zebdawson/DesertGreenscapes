@@ -94,12 +94,25 @@ export default function AboutPage() {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <PlaceholderImage
-                category="landscape"
-                aspectRatio="4:3"
-                label="Desert Greenscapes Team"
-                showOverlay={false}
+              {/* Replace '/images/about/team-photo.jpg' with your actual team photo */}
+              <img
+                src="/images/about/team-photo.jpg"
+                alt="Desert Greenscapes Team"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to placeholder if image doesn't exist yet
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
               />
+              <div className="hidden">
+                <PlaceholderImage
+                  category="landscape"
+                  aspectRatio="4:3"
+                  label="Desert Greenscapes Team"
+                  showOverlay={false}
+                />
+              </div>
             </div>
             <div className="absolute -bottom-6 -right-6 bg-forest-green text-white p-6 rounded-xl shadow-xl max-w-xs">
               <div className="font-headline font-bold text-3xl mb-1">30+ Years</div>
@@ -133,13 +146,21 @@ export default function AboutPage() {
               key={index}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-[4/5] bg-gradient-to-br from-sage-green to-forest-green relative">
-                <PlaceholderImage
-                  category="general"
-                  aspectRatio="3:4"
-                  label={member.name}
-                  showOverlay={false}
-                />
+              <div className="aspect-[4/5] bg-gradient-to-br from-sage-green to-forest-green relative overflow-hidden">
+                {member.image && member.image.includes('/images/team/') ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <PlaceholderImage
+                    category="general"
+                    aspectRatio="3:4"
+                    label={member.name}
+                    showOverlay={false}
+                  />
+                )}
               </div>
               <div className="p-6">
                 <h3 className="font-headline font-bold text-2xl text-charcoal mb-1">
