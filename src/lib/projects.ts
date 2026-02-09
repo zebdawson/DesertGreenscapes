@@ -55,7 +55,7 @@ export const projects: Project[] = [
         '/images/projects/placeholder-pavers-1.jpg',
         '/images/projects/placeholder-lighting-1.jpg',
       ],
-      before: 'public/desert-lawn-before-after.png',
+      before: 'public/images/desert-lawn-before-after.png',
       after: '/images/projects/placeholder-landscape-1.jpg',
     },
     video: '/videos/projects/henderson-anthem.mp4',
