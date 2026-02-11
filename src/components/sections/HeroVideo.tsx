@@ -35,7 +35,7 @@ export default function HeroVideo() {
               className="absolute inset-0 w-full h-full object-cover"
               onError={() => setVideoError(true)}
             >
-              <source src="/public/images/hero-bg.jpg" type="image/jpg" />
+              <source src="/images/hero-bg.jpg" type="image/jpg" />
             </video>
           </>
         ) : (
