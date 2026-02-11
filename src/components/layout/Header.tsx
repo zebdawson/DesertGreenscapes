@@ -45,17 +45,13 @@ export default function Header() {
       <Container>
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-forest-green to-sage-green rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <span className="text-white font-headline font-bold text-2xl">DG</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className="font-headline font-bold text-xl lg:text-2xl text-charcoal">
-                Desert Greenscapes
-              </div>
-              <div className="text-xs text-slate">Las Vegas Landscaping Experts</div>
-            </div>
-          </Link>
+          <Link href="/" className="flex items-center group">
+  <img 
+    src="/images/logo.png" 
+    alt="Desert Greenscapes" 
+    className="h-12 lg:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+  />
+</Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
