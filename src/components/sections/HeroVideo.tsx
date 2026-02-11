@@ -31,7 +31,7 @@ export default function HeroVideo() {
               muted
               loop
               playsInline
-              poster="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000"
+              poster="/public/images/hero-bg.jpg"
               className="absolute inset-0 w-full h-full object-cover"
               onError={() => setVideoError(true)}
             >
