@@ -25,20 +25,13 @@ export default function HeroVideo() {
       {/* Video Background with Fallback */}
       <div className="absolute inset-0 z-0">
         {!videoError ? (
-          <>
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/public/images/hero-bg.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-              onError={() => setVideoError(true)}
-            >
-              <source src="/images/hero-bg.jpg" type="image/jpg" />
-            </video>
-          </>
-        ) : (
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: `url('/images/hero-bg.jpg')`,
+    }}
+  />
+) : (
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
