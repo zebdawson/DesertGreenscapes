@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Award, Users, TrendingUp } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Badge from '@/components/ui/Badge';
@@ -15,7 +16,7 @@ const STATS = [
   },
   {
     icon: Award,
-    number: '30+',
+    number: '20+',
     label: 'Years in Las Vegas'
   },
   {
@@ -28,21 +29,18 @@ const STATS = [
 const TEAM_MEMBERS = [
   {
     name: 'Steve Hofsaess',
-    role: 'Owner',
+    role: 'Owner & Founder',
     image: '/images/team/steve.jpg',
-    bio: '30+ years transforming Las Vegas landscapes'
   },
   {
     name: 'Pedro',
     role: 'Lead Installer',
     image: '/images/team/pedro.jpg',
-    bio: 'Bilingual expert in custom installations'
   },
   {
     name: 'George',
-    role: 'Operations Manager',
+    role: 'Waterfall & Plants Specialist',
     image: '/images/team/george.jpg',
-    bio: 'Master craftsman & waterfall specialist'
   }
 ];
 
@@ -57,7 +55,7 @@ export default function LasVegasExperts() {
             Proudly Local
           </Badge>
           <h2 className="font-headline font-bold text-4xl sm:text-5xl text-charcoal mb-6">
-            Las Vegas Landscaping Experts Since 1994
+            Las Vegas Landscaping Experts Since 2002
           </h2>
           <div className="space-y-4 text-lg text-slate leading-relaxed mb-8">
             <p>
@@ -65,7 +63,7 @@ export default function LasVegasExperts() {
               understand the unique challenges of creating beautiful outdoor spaces in the Mojave Desert.
             </p>
             <p>
-              From the scorching summers to the caliche soil, we've spent 30 years perfecting landscapes
+              From the scorching summers to the caliche soil, we've spent over 20 years perfecting landscapes
               that thrive in Southern Nevada. We know what works, what lasts, and what will make your
               outdoor space truly special.
             </p>
@@ -101,12 +99,18 @@ export default function LasVegasExperts() {
                 <div key={index} className="text-center">
                   <div className="relative mb-3">
                     <div className="aspect-square rounded-full overflow-hidden bg-gradient-to-br from-sage-green to-forest-green">
-                      <PlaceholderImage
-                        category="general"
-                        aspectRatio="1:1"
-                        showOverlay={false}
-                        className="rounded-full"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="font-accent font-semibold text-charcoal text-sm">

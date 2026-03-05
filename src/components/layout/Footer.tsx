@@ -22,11 +22,11 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="font-headline font-bold text-xl">Desert Greenscapes</div>
-                  <div className="text-xs text-cloud">Since 1994</div>
+                  <div className="text-xs text-cloud">Since 2002</div>
                 </div>
               </div>
               <p className="text-cloud mb-4 text-sm leading-relaxed">
-                Transforming Las Vegas outdoor spaces for over 30 years with premium artificial turf,
+                Transforming Las Vegas outdoor spaces since 2002 with premium artificial turf,
                 custom pavers, and stunning water features.
               </p>
               <Badge variant="gold" size="sm" icon={<Award className="w-3 h-3" />}>

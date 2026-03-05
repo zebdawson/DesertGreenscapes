@@ -35,7 +35,7 @@ export default function RebatesPage() {
     },
     {
       question: 'Can Desert Greenscapes help with the rebate paperwork?',
-      answer: 'Absolutely! We handle the entire rebate process for you. We\'ll help with pre-approval applications, ensure your project meets all requirements, document the installation with required photos, and submit final paperwork. We\'ve successfully processed thousands of rebate applications.',
+      answer: 'Absolutely! We assist with the entire rebate process. We\'ll help with pre-approval applications, ensure your project meets all requirements, document the installation with required photos, and submit final paperwork. We\'ve successfully processed thousands of rebate applications.',
     },
     {
       question: 'Are there any restrictions on artificial turf for rebates?',
@@ -77,7 +77,7 @@ export default function RebatesPage() {
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
               The Southern Nevada Water Authority rewards homeowners for converting grass to
-              water-smart landscaping. We'll handle all the paperwork—you enjoy the savings!
+              water-smart landscaping. We'll assist with the paperwork—you enjoy the savings!
             </p>
             <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-2xl px-8 py-4 border border-white/20">
               <Droplets className="w-8 h-8 text-water-blue" />
@@ -202,7 +202,7 @@ export default function RebatesPage() {
               {
                 step: 2,
                 title: 'Pre-Approval Application',
-                description: 'We submit your pre-approval application to SNWA with all required documentation, including property details, water account information, and project plans. Most approvals come within 2-3 weeks.',
+                description: 'We assist with your pre-approval application to SNWA, including property details, water account information, and project plans. Most approvals come within 2-3 weeks.',
                 icon: FileText,
                 color: 'forest-green',
               },
@@ -216,7 +216,7 @@ export default function RebatesPage() {
               {
                 step: 4,
                 title: 'Final Submission & Payment',
-                description: 'We submit final documentation to SNWA, including completion photos and invoices. You receive your rebate check directly from SNWA within 6-8 weeks of final approval.',
+                description: 'We assist with submitting final documentation to SNWA, including completion photos and invoices. You receive your rebate check directly from SNWA within 6-8 weeks of final approval.',
                 icon: DollarSign,
                 color: 'desert-gold',
               },
@@ -251,11 +251,11 @@ export default function RebatesPage() {
               <Award className="w-8 h-8 text-forest-green flex-shrink-0" />
               <div>
                 <h4 className="font-accent font-bold text-lg text-charcoal mb-2">
-                  We Handle Everything for You
+                  We're With You Every Step of the Way
                 </h4>
                 <p className="text-slate">
-                  Desert Greenscapes has processed thousands of successful rebate applications.
-                  We know exactly what SNWA requires and handle all paperwork, measurements, and
+                  Desert Greenscapes has assisted with thousands of successful rebate applications.
+                  We know exactly what SNWA requires and help with all paperwork, measurements, and
                   documentation. You just sit back and wait for your rebate check!
                 </p>
               </div>
@@ -537,7 +537,7 @@ export default function RebatesPage() {
             Ready to Save Thousands on Your Landscape?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Let Desert Greenscapes handle your SNWA rebate application from start to finish.
+            Let Desert Greenscapes assist with your SNWA rebate application from start to finish.
             Get your free estimate and rebate projection today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

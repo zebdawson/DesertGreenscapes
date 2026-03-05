@@ -61,7 +61,7 @@ export default function HeroVideo() {
               <div className="mb-6">
                 <Badge variant="gold" size="lg" className="mb-4">
                   <Award className="w-4 h-4" />
-                  Serving Las Vegas Since 1994
+                  Serving Las Vegas Since 2002
                 </Badge>
                 <h1 className="font-headline font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-4">
                   Transform Your Desert Into Paradise

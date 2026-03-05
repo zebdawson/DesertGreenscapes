@@ -82,7 +82,7 @@ export default function SNWARebateBanner() {
                 className="text-white/80 max-w-2xl mx-auto lg:mx-0"
               >
                 Replace your water-hungry grass with beautiful artificial turf and get a generous
-                rebate. <span className="font-semibold">We handle all the paperwork!</span>
+                rebate. <span className="font-semibold">We assist with all the paperwork!</span>
               </motion.p>
             </div>
 
@@ -117,7 +117,7 @@ export default function SNWARebateBanner() {
                     <div className="w-5 h-5 rounded-full bg-desert-gold/20 flex items-center justify-center flex-shrink-0">
                       <ArrowRight className="w-3 h-3 text-desert-gold" />
                     </div>
-                    <span>We handle all paperwork</span>
+                    <span>We assist with the paperwork</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-5 h-5 rounded-full bg-desert-gold/20 flex items-center justify-center flex-shrink-0">

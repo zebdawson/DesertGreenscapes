@@ -14,11 +14,11 @@ import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Artificial Turf Installation Las Vegas | Premium Synthetic Grass',
-  description: 'Professional artificial turf installation in Las Vegas. SNWA rebate eligible ($7/sq ft). Lifetime warranty, pet-friendly options. 30+ years experience. Free estimate!',
+  description: 'Professional artificial turf installation in Las Vegas. SNWA rebate eligible ($7/sq ft). Prorated lifetime warranty, pet-friendly options. 20+ years experience. Free estimate!',
 };
 
 const FEATURES = [
-  'Lifetime warranty on materials',
+  'Prorated lifetime warranty on materials',
   'SNWA rebate eligible ($7/sq ft)',
   'Pet-friendly options available',
   'Professional drainage system',
@@ -37,7 +37,7 @@ const BENEFITS = [
   {
     icon: Shield,
     title: 'Built to Last',
-    description: '15-20 year lifespan with lifetime warranty. Withstands harsh Las Vegas heat and sun.'
+    description: '15-20 year lifespan with prorated lifetime warranty. Withstands harsh Las Vegas heat and sun.'
   },
   {
     icon: CheckCircle,
@@ -58,7 +58,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How long does artificial turf last?',
-    answer: 'Our premium artificial turf is designed to last 15-20 years with proper care. We back our turf with a lifetime warranty on materials for your peace of mind.'
+    answer: 'Our premium artificial turf is designed to last 15-20 years with proper care. It comes with a prorated lifetime warranty on materials — coverage is adjusted based on the age of the turf, similar to how tire warranties work.'
+  },
+  {
+    question: 'What does the prorated lifetime warranty mean?',
+    answer: 'Our warranty is prorated based on the age of your turf. For example, if your turf is 8 years old, you pay 20% of the replacement cost and we cover the rest. This ensures you\'re always protected with a fair, transparent policy.'
   },
   {
     question: 'Is artificial turf safe for dogs and pets?',
@@ -70,7 +74,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is the SNWA rebate program?',
-    answer: 'The Southern Nevada Water Authority offers a $7 per square foot rebate for replacing grass with water-smart landscaping like artificial turf. We handle all the paperwork, inspections, and ensure you receive your maximum rebate.'
+    answer: 'The Southern Nevada Water Authority offers a $7 per square foot rebate for replacing grass with water-smart landscaping like artificial turf. We assist with the paperwork to help ensure you receive your maximum rebate.'
   },
   {
     question: 'How long does installation take?',
@@ -82,7 +86,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Can I install artificial turf myself?',
-    answer: 'While DIY is possible, professional installation ensures proper base preparation, drainage, seaming, and longevity. Our 30+ years of experience means we get it right the first time, and you qualify for the SNWA rebate with professional installation.'
+    answer: 'While DIY is possible, professional installation ensures proper base preparation, drainage, seaming, and longevity. Our 20+ years of experience means we get it right the first time, and you qualify for the SNWA rebate with professional installation.'
   }
 ];
 
@@ -141,9 +145,9 @@ export default function ArtificialTurfPage() {
           </div>
           <div>
             <div className="text-4xl font-headline font-bold text-forest-green mb-2">
-              Lifetime
+              Prorated
             </div>
-            <div className="text-slate font-accent">Warranty Included</div>
+            <div className="text-slate font-accent">Lifetime Warranty Included</div>
           </div>
           <div>
             <div className="text-4xl font-headline font-bold text-forest-green mb-2">
@@ -169,7 +173,7 @@ export default function ArtificialTurfPage() {
                 or maintenance headaches.
               </p>
               <p className="text-slate leading-relaxed">
-                With over 30 years of experience installing artificial turf across Southern Nevada, we've perfected
+                With over 20 years of experience installing artificial turf across Southern Nevada, we've perfected
                 the art of creating beautiful, durable synthetic lawns that look and feel natural. From residential
                 backyards to commercial properties, putting greens to dog runs, we do it all.
               </p>
@@ -379,7 +383,7 @@ export default function ArtificialTurfPage() {
             Ready for a Maintenance-Free Lawn?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Free estimates • Lifetime warranty • SNWA rebate experts • Next-day installation available
+            Free estimates • Prorated lifetime warranty • SNWA rebate experts • Next-day installation available
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="cta" size="lg" asChild>
