@@ -21,12 +21,12 @@ const BEFORE_AFTER_PROJECTS = [
   },
   {
     id: 2,
-    title: 'Summerlin Pool Surround',
-    description: 'Complete poolside transformation with custom waterfall',
-    services: ['Turf', 'Custom Waterfall', 'Pavers'],
-    beforeImage: 'placeholder',
-    afterImage: 'placeholder',
-    isReal: false,
+    title: 'Las Vegas Backyard Oasis',
+    description: 'Barren hillside transformed into a natural rock waterfall, custom fire pit, and paver patio',
+    services: ['Waterfall', 'Fire Feature', 'Pavers', 'Desert Plants'],
+    beforeImage: '/images/projects/project-02-before.jpg',
+    afterImage: '/images/projects/project-02-after.jpg',
+    isReal: true,
     category: 'waterfall'
   },
   {
