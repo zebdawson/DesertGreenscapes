@@ -89,7 +89,7 @@ export default function ServicesPage() {
       <Section background="cloud" padding="xl">
         <Container>
           <div className="text-center mb-12">
-            <Badge variant="green" className="mb-4">Core Services</Badge>
+            <Badge variant="primary" className="mb-4">Core Services</Badge>
             <h2 className="font-headline font-bold text-3xl sm:text-4xl text-charcoal mb-4">
               Our Primary Services
             </h2>

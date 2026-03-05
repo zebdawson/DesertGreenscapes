@@ -96,7 +96,7 @@ export default function LandscapeDesignPage() {
         </div>
 
         <Container className="relative z-10 text-center pt-32 pb-16">
-          <Badge variant="green" size="lg" className="mb-4">
+          <Badge variant="primary" size="lg" className="mb-4">
             <Leaf className="w-4 h-4" />
             Full-Service Landscaping
           </Badge>
