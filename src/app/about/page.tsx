@@ -1,7 +1,7 @@
 'use client';
 
-import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Award, MapPin, Users, Calendar, Shield, Heart, CheckCircle2, Phone } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
@@ -9,7 +9,6 @@ import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import PlaceholderImage from '@/components/ui/PlaceholderImage';
 import { BUSINESS_INFO, TEAM_MEMBERS } from '@/lib/constants';
-import { cn } from '@/lib/utils';
 
 export default function AboutPage() {
   return (
@@ -23,12 +22,12 @@ export default function AboutPage() {
               Family-Owned & Operated
             </Badge>
             <h1 className="font-headline font-bold text-4xl sm:text-5xl lg:text-6xl mb-6">
-              30+ Years of Transforming Las Vegas Landscapes
+              20+ Years Transforming Las Vegas Landscapes
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Since the early 1990s, Desert Greenscapes has been the trusted name in premium
-              landscaping throughout Southern Nevada. We're not just contractors—we're your
-              neighbors, dedicated to making Las Vegas greener, one yard at a time.
+              Since 2002, Desert Greenscapes has been the trusted name in premium landscaping
+              throughout Southern Nevada. We're not just contractors—we're your neighbors,
+              dedicated to making Las Vegas beautiful, one yard at a time.
             </p>
           </div>
         </Container>
@@ -38,11 +37,11 @@ export default function AboutPage() {
       <Section background="white" padding="sm">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="font-headline font-bold text-4xl text-forest-green mb-2">30+</div>
-            <div className="text-sm text-slate font-accent">Years in Business</div>
+            <div className="font-headline font-bold text-4xl text-forest-green mb-2">2002</div>
+            <div className="text-sm text-slate font-accent">Founded in Las Vegas</div>
           </div>
           <div className="text-center">
-            <div className="font-headline font-bold text-4xl text-forest-green mb-2">5,000+</div>
+            <div className="font-headline font-bold text-4xl text-forest-green mb-2">1,000+</div>
             <div className="text-sm text-slate font-accent">Projects Completed</div>
           </div>
           <div className="text-center">
@@ -69,43 +68,43 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-slate leading-relaxed">
               <p>
-                Desert Greenscapes was founded in the early 1990s with a simple mission: to bring
-                beautiful, sustainable landscapes to Las Vegas homes and businesses. What started as
-                a small operation has grown into one of Southern Nevada's most trusted landscaping companies.
+                Desert Greenscapes was founded in 2002 by Steve Hofsaess with a simple mission:
+                to bring beautiful, sustainable landscapes to Las Vegas homes and businesses.
+                What started as a small operation has grown into one of Southern Nevada's most
+                trusted landscaping companies.
               </p>
               <p>
-                Over three decades, we've witnessed Las Vegas transform from a desert outpost into a
-                thriving metropolis. Through it all, we've been there—helping homeowners and businesses
-                adapt to water conservation challenges while creating stunning outdoor spaces that enhance
-                property values and quality of life.
+                Over more than two decades, we've witnessed Las Vegas transform into a thriving
+                metropolis. Through it all, we've been here — helping homeowners and businesses
+                navigate water conservation challenges while creating stunning outdoor spaces that
+                enhance property values and quality of life.
               </p>
               <p>
-                Today, Desert Greenscapes is led by Steve Hofsaess and supported by an exceptional team
-                including Pedro, our master installer with decades of experience, and George, who ensures
-                every project runs smoothly from start to finish. We're still family-owned, still locally
-                operated, and still committed to delivering the highest quality workmanship in the industry.
+                Today, Desert Greenscapes is a true team effort. Steve leads the business with
+                Pedro — our bilingual master installer with an eye for perfection — and George,
+                our waterfall and plants specialist whose custom water features and desert plant
+                designs have become some of the most talked-about in the Las Vegas valley.
               </p>
               <p>
-                We've specialized in artificial turf installation, custom waterfalls, paver installations,
-                and complete landscape design. Our expertise with SNWA rebate programs has helped thousands
-                of homeowners save money while conserving water—a win-win for your wallet and our desert environment.
+                We specialize in artificial turf, custom waterfalls, paver installations, and
+                complete landscape design. As SNWA-authorized contractors, we've helped hundreds
+                of homeowners save thousands through water conservation rebates — and we make
+                the paperwork process as smooth as possible.
               </p>
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Replace '/images/about/team-photo.jpg' with your actual team photo */}
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-sage-green to-forest-green">
               <img
                 src="/images/about/team-photo.jpg"
                 alt="Desert Greenscapes Team"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  // Fallback to placeholder if image doesn't exist yet
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling?.classList.remove('hidden');
                 }}
               />
-              <div className="hidden">
+              <div className="hidden w-full h-full">
                 <PlaceholderImage
                   category="landscape"
                   aspectRatio="4:3"
@@ -115,9 +114,9 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="absolute -bottom-6 -right-6 bg-forest-green text-white p-6 rounded-xl shadow-xl max-w-xs">
-              <div className="font-headline font-bold text-3xl mb-1">30+ Years</div>
+              <div className="font-headline font-bold text-3xl mb-1">Since 2002</div>
               <div className="text-sm text-white/90">
-                of trusted service in Southern Nevada
+                Serving Southern Nevada for over 20 years
               </div>
             </div>
           </div>
@@ -135,8 +134,8 @@ export default function AboutPage() {
             The People Behind Your Dream Landscape
           </h2>
           <p className="text-lg text-slate">
-            Our experienced team brings decades of combined expertise to every project.
-            We're passionate about what we do, and it shows in our work.
+            Three specialists. Decades of combined experience. One goal — making your outdoor
+            space exactly what you've always wanted.
           </p>
         </div>
 
@@ -147,20 +146,14 @@ export default function AboutPage() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="aspect-[4/5] bg-gradient-to-br from-sage-green to-forest-green relative overflow-hidden">
-                {member.image && member.image.includes('/images/team/') ? (
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <PlaceholderImage
-                    category="general"
-                    aspectRatio="3:4"
-                    label={member.name}
-                    showOverlay={false}
-                  />
-                )}
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
               </div>
               <div className="p-6">
                 <h3 className="font-headline font-bold text-2xl text-charcoal mb-1">
@@ -216,8 +209,8 @@ export default function AboutPage() {
               Quality Craftsmanship
             </h3>
             <p className="text-slate leading-relaxed">
-              We take pride in every installation. Our work isn't just about getting the job done—it's
-              about exceeding expectations with attention to detail and superior materials.
+              We take pride in every installation. Our work isn't just about getting the job
+              done — it's about exceeding expectations with attention to detail and superior materials.
             </p>
           </div>
 
@@ -252,11 +245,11 @@ export default function AboutPage() {
               <Award className="w-7 h-7 text-forest-green" />
             </div>
             <h3 className="font-headline font-bold text-xl text-charcoal mb-3">
-              Industry Expertise
+              Deep Local Expertise
             </h3>
             <p className="text-slate leading-relaxed">
-              With 30+ years of experience and continuous training, we stay ahead of industry
-              trends and best practices to deliver cutting-edge solutions.
+              With 20+ years working exclusively in Southern Nevada, we know the soil, the
+              heat, the HOA requirements, and exactly what works long-term in this climate.
             </p>
           </div>
 
@@ -265,11 +258,11 @@ export default function AboutPage() {
               <MapPin className="w-7 h-7 text-forest-green" />
             </div>
             <h3 className="font-headline font-bold text-xl text-charcoal mb-3">
-              Local Knowledge
+              Bilingual Team
             </h3>
             <p className="text-slate leading-relaxed">
-              We understand Las Vegas' unique climate challenges. Our solutions are designed
-              specifically for Southern Nevada's extreme heat and water conservation needs.
+              We proudly serve Las Vegas' diverse community. Pedro and George are fluent in
+              Spanish — hablamos español — so nothing gets lost in translation.
             </p>
           </div>
 
@@ -281,8 +274,8 @@ export default function AboutPage() {
               Community Focused
             </h3>
             <p className="text-slate leading-relaxed">
-              As a local, family-owned business, we're invested in our community. We support
-              water conservation efforts and contribute to making Las Vegas more sustainable.
+              As a local, family-owned business, we're invested in our community. We actively
+              support water conservation efforts and help Las Vegas adapt to desert living.
             </p>
           </div>
         </div>
@@ -300,8 +293,8 @@ export default function AboutPage() {
               Fully Licensed & Insured
             </h2>
             <p className="text-lg text-slate">
-              Your peace of mind is important to us. We maintain all required licenses and
-              insurance to protect you and your property.
+              Your peace of mind matters. We maintain all required licenses and insurance
+              to protect you and your property on every job.
             </p>
           </div>
 
@@ -332,11 +325,11 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-headline font-bold text-xl text-charcoal mb-2">
-                    SNWA Certified
+                    SNWA Authorized
                   </h3>
                   <p className="text-sm text-slate">
-                    Certified installer for Southern Nevada Water Authority rebate programs.
-                    We handle all paperwork to maximize your water conservation incentives.
+                    Authorized contractor for Southern Nevada Water Authority rebate programs.
+                    We assist with paperwork to help maximize your water conservation incentives.
                   </p>
                 </div>
               </div>
@@ -366,11 +359,11 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-headline font-bold text-xl text-charcoal mb-2">
-                    BBB Accredited
+                    BBB Rating: A+
                   </h3>
                   <p className="text-sm text-slate">
-                    Proud member of the Better Business Bureau with an A+ rating,
-                    demonstrating our commitment to ethical business practices.
+                    Rated A+ by the Better Business Bureau, reflecting our long track record
+                    of ethical business practices and customer satisfaction.
                   </p>
                 </div>
               </div>
@@ -421,7 +414,7 @@ export default function AboutPage() {
 
         <div className="mt-8 text-center">
           <p className="text-slate mb-4">
-            Don't see your area listed? We serve many more communities throughout Southern Nevada.
+            Don't see your area? We serve many communities throughout Southern Nevada.
           </p>
           <Button variant="outline" size="lg" asChild>
             <a href={`tel:${BUSINESS_INFO.phone}`}>
@@ -447,28 +440,28 @@ export default function AboutPage() {
           <div className="space-y-4">
             {[
               {
-                title: 'Three Decades of Excellence',
-                description: 'Since the early 1990s, we\'ve perfected our craft and built lasting relationships with thousands of satisfied customers.',
+                title: 'Over 20 Years of Local Excellence',
+                description: 'Founded in Las Vegas in 2002, we\'ve spent over two decades perfecting our craft and building lasting relationships with hundreds of satisfied customers.',
               },
               {
-                title: 'Local Expertise',
-                description: 'We understand Las Vegas\' unique challenges—extreme heat, water scarcity, and desert landscaping requirements.',
+                title: 'Specialists, Not Generalists',
+                description: 'Steve, Pedro, and George each bring deep expertise in their specific areas — turf, installation, and water features. You\'re not getting a jack-of-all-trades crew.',
               },
               {
-                title: 'SNWA Rebate Specialists',
-                description: 'We\'ve helped homeowners save millions through water-smart rebate programs. We handle all paperwork and maximize your incentives.',
+                title: 'SNWA Rebate Experts',
+                description: 'As authorized SNWA contractors, we assist homeowners through the rebate process and have helped our clients save hundreds of thousands in water conservation incentives.',
               },
               {
-                title: 'Quality Materials',
-                description: 'We partner with premium manufacturers to ensure your landscape withstands Vegas\' harsh climate for decades.',
+                title: 'Bilingual Service',
+                description: 'We serve Las Vegas\' entire community. Pedro and George are fluent Spanish speakers — no language barriers, ever.',
               },
               {
                 title: 'Transparent Pricing',
-                description: 'Detailed estimates with no hidden fees. You\'ll know exactly what to expect before we start.',
+                description: 'Detailed estimates with no hidden fees. You\'ll know exactly what to expect before we break ground.',
               },
               {
-                title: 'Warranty Protection',
-                description: 'Industry-leading warranties on materials and workmanship give you confidence in your investment.',
+                title: 'Prorated Lifetime Warranty',
+                description: 'Our turf comes with a prorated lifetime warranty. We stand behind our work long after the job is done.',
               },
               {
                 title: 'Clean & Professional',
@@ -476,7 +469,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Family-Owned Values',
-                description: 'As a local family business, we care about our reputation and stand behind every project we complete.',
+                description: 'As a local family business, our reputation is everything. We don\'t cut corners — every project gets our full attention.',
               },
             ].map((item, index) => (
               <div
@@ -505,7 +498,7 @@ export default function AboutPage() {
             Ready to Transform Your Outdoor Space?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join thousands of satisfied Las Vegas homeowners who trust Desert Greenscapes
+            Join hundreds of satisfied Las Vegas homeowners who trust Desert Greenscapes
             for their landscaping needs. Let's bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
