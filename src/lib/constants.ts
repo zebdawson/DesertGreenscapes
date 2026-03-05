@@ -31,23 +31,23 @@ export const TEAM_MEMBERS = [
   {
     name: 'Steve Hofsaess',
     role: 'Owner & Founder',
-    bio: 'With over 30 years of experience in Las Vegas landscaping, Steve has built Desert Greenscapes into one of Southern Nevada\'s most trusted names in outdoor transformations. His commitment to quality and customer satisfaction has earned the company an impeccable reputation.',
+    bio: 'With over 20 years of experience in Las Vegas landscaping, Steve founded Desert Greenscapes in 2002 and has built it into one of Southern Nevada\'s most trusted names in outdoor transformations. His commitment to quality and customer satisfaction has earned the company an impeccable reputation.',
     specialties: ['Artificial Turf', 'Project Management', 'Customer Relations', 'SNWA Rebates'],
-    image: '/images/team/steve.jpg' // Placeholder
+    image: '/images/team/steve.jpg'
   },
   {
     name: 'Pedro',
     role: 'Lead Installer & Partner',
     bio: 'Pedro brings decades of hands-on experience and bilingual expertise to every project. His meticulous attention to detail and dedication to craftsmanship ensure every installation exceeds expectations. Fluent in English and Spanish, Pedro connects with our diverse Las Vegas community.',
     specialties: ['Artificial Turf Installation', 'Custom Designs', 'Spanish Translation', 'Quality Control'],
-    image: '/images/team/pedro.jpg' // Placeholder
+    image: '/images/team/pedro.jpg'
   },
   {
     name: 'George',
-    role: 'Operations Manager & Partner',
-    bio: 'George is a true artisan with over 30 years of experience in custom waterfalls, hardscaping, and complex installations. His ability to bring creative visions to life while managing projects efficiently makes him invaluable to the Desert Greenscapes team.',
-    specialties: ['Waterfall Construction', 'Paver Installation', 'Operations', 'Hardscape Design'],
-    image: '/images/team/george.jpg' // Placeholder
+    role: 'Waterfall & Plants Specialist',
+    bio: 'George is a true artisan with decades of experience in custom waterfalls, koi ponds, desert plants, and complex installations. His ability to bring creative visions to life — including some of the most stunning water features in the Las Vegas valley — makes him an irreplaceable part of the Desert Greenscapes team.',
+    specialties: ['Custom Waterfalls', 'Koi Ponds', 'Desert Plants', 'Hardscape Design'],
+    image: '/images/team/george.jpg'
   }
 ];
 
@@ -79,7 +79,7 @@ export const PRIMARY_SERVICES = [
     image: '/images/services/artificial-turf.jpg',
     slug: '/services/artificial-turf',
     features: [
-      'Lifetime Warranty',
+      'Prorated Lifetime Warranty',
       'SNWA Rebate Eligible ($7/sq ft)',
       'Pet-Friendly Options',
       'Drainage System Included',
@@ -123,13 +123,13 @@ export const PRIMARY_SERVICES = [
   {
     id: 'waterfalls',
     title: 'Custom Waterfalls & Water Features',
-    shortDescription: '30+ years creating stunning water features and pondless waterfalls',
+    shortDescription: '20+ years creating stunning water features and pondless waterfalls',
     description: 'Add the soothing sound of water to your outdoor oasis. Our custom waterfalls and water features are expertly designed and built to last in the desert climate.',
     icon: 'Waves',
     image: '/images/services/waterfalls.jpg',
     slug: '/services/waterfalls',
     features: [
-      '30+ Years Experience',
+      '20+ Years Experience',
       'Custom Designs',
       'Natural Stone',
       'LED Lighting Options',
@@ -230,12 +230,12 @@ export const TRUST_BADGES = [
   },
   {
     icon: 'Award',
-    title: '30+ Years',
-    description: 'Experience in Las Vegas'
+    title: '20+ Years',
+    description: 'Serving Las Vegas Since 2002'
   },
   {
     icon: 'CheckCircle',
-    title: 'Lifetime Warranty',
+    title: 'Prorated Lifetime Warranty',
     description: 'On artificial turf'
   },
   {
@@ -264,18 +264,18 @@ export const WHY_CHOOSE_US = [
   },
   {
     icon: 'Shield',
-    title: 'Lifetime Warranty',
-    description: 'Our artificial turf comes with a lifetime warranty for your peace of mind.'
+    title: 'Prorated Lifetime Warranty',
+    description: 'Our artificial turf comes with a prorated lifetime warranty for your peace of mind.'
   },
   {
     icon: 'DollarSign',
     title: 'SNWA Rebate Experts',
-    description: 'We handle all paperwork for your $7 per square foot rebate.'
+    description: 'We assist with the paperwork for your $7 per square foot rebate.'
   },
   {
     icon: 'Award',
-    title: '30+ Years Experience',
-    description: 'Three decades of transforming Las Vegas outdoor spaces.'
+    title: '20+ Years Experience',
+    description: 'Over two decades of transforming Las Vegas outdoor spaces since 2002.'
   },
   {
     icon: 'MessageCircle',
@@ -379,7 +379,7 @@ export const TESTIMONIALS = [
     name: 'Carlos R.',
     location: 'Las Vegas, NV',
     rating: 5,
-    text: 'Excelente trabajo! The waterfall they built is absolutely stunning. Pedro was great to work with and made sure everything was perfect. Highly recommend!',
+    text: 'Excelente trabajo! The waterfall they built is absolutely stunning. George was great to work with and made sure everything was perfect. Highly recommend!',
     image: '/images/testimonials/carlos.jpg',
     service: 'Custom Waterfall'
   },
@@ -395,7 +395,7 @@ export const TESTIMONIALS = [
     name: 'Robert K.',
     location: 'North Las Vegas, NV',
     rating: 5,
-    text: 'The SNWA rebate process was so easy - they handled everything! Our water bill has dropped significantly since installing the artificial turf. Great investment.',
+    text: 'The SNWA rebate process was so easy - they assisted us with all the paperwork! Our water bill has dropped significantly since installing the artificial turf. Great investment.',
     image: '/images/testimonials/robert.jpg',
     service: 'Artificial Turf'
   }
@@ -405,11 +405,15 @@ export const TESTIMONIALS = [
 export const FAQ_ITEMS = [
   {
     question: 'How much does artificial turf installation cost?',
-    answer: 'The cost varies based on the size of your project, turf quality, and site preparation needed. Most residential projects range from $8-15 per square foot installed. Remember, SNWA offers a $7/sq ft rebate which we help you obtain!'
+    answer: 'The cost varies based on the size of your project, turf quality, and site preparation needed. Most residential projects range from $8-15 per square foot installed. Remember, SNWA offers a $7/sq ft rebate which we can help you obtain!'
   },
   {
     question: 'How long does artificial turf last?',
-    answer: 'Our premium artificial turf is designed to last 15-20 years with proper care. We back our turf with a lifetime warranty for your peace of mind.'
+    answer: 'Our premium artificial turf is designed to last 15-20 years with proper care. It comes with a prorated lifetime warranty — similar to how tire warranties work, coverage is adjusted based on the age of the turf.'
+  },
+  {
+    question: 'What does the prorated lifetime warranty mean?',
+    answer: 'Our warranty is prorated based on the age of your turf — similar to how tire warranties work. For example, if your turf is 8 years old, you pay 20% of the replacement cost and we cover the rest. This ensures you\'re always protected with a fair, transparent policy.'
   },
   {
     question: 'Is artificial turf safe for pets?',
@@ -417,7 +421,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'What is the SNWA rebate program?',
-    answer: 'The Southern Nevada Water Authority offers a $7 per square foot rebate for replacing grass with artificial turf or desert landscaping. We handle all the paperwork and ensure you receive your maximum rebate.'
+    answer: 'The Southern Nevada Water Authority offers a $7 per square foot rebate for replacing grass with artificial turf or desert landscaping. We assist with the paperwork to help ensure you receive your maximum rebate.'
   },
   {
     question: 'How long does installation take?',
