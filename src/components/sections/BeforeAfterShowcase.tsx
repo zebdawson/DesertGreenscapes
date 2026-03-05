@@ -149,12 +149,12 @@ export default function BeforeAfterShowcase() {
       <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div className="text-4xl font-headline font-bold text-forest-green mb-2">2,500+</div>
+            <div className="text-4xl font-headline font-bold text-forest-green mb-2">1,000+</div>
             <div className="text-slate font-accent">Projects Completed</div>
           </div>
           <div>
-            <div className="text-4xl font-headline font-bold text-forest-green mb-2">30+</div>
-            <div className="text-slate font-accent">Years in Las Vegas</div>
+            <div className="text-4xl font-headline font-bold text-forest-green mb-2">20+</div>
+            <div className="text-slate font-accent">Years Serving Las Vegas</div>
           </div>
           <div>
             <div className="text-4xl font-headline font-bold text-forest-green mb-2">$2M+</div>
