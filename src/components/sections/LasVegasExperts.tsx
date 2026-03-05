@@ -11,7 +11,7 @@ import PlaceholderImage from '@/components/ui/PlaceholderImage';
 const STATS = [
   {
     icon: Users,
-    number: '2,500+',
+    number: '1,000+',
     label: 'Vegas Backyards Transformed'
   },
   {

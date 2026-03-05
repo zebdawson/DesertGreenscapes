@@ -1,12 +1,12 @@
 'use client';
 
+import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, GripVertical } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
-import PlaceholderImage from '@/components/ui/PlaceholderImage';
 
 const BEFORE_AFTER_PROJECTS = [
   {
@@ -24,8 +24,8 @@ const BEFORE_AFTER_PROJECTS = [
     title: 'Summerlin Pool Surround',
     description: 'Complete poolside transformation with custom waterfall',
     services: ['Turf', 'Custom Waterfall', 'Pavers'],
-    beforeImage: 'placeholder-before-2',
-    afterImage: 'placeholder-after-2',
+    beforeImage: 'placeholder',
+    afterImage: 'placeholder',
     isReal: false,
     category: 'waterfall'
   },
@@ -34,12 +34,121 @@ const BEFORE_AFTER_PROJECTS = [
     title: 'North Las Vegas Front Yard',
     description: 'SNWA rebate project - $4,200 saved',
     services: ['Artificial Turf', 'Xeriscaping'],
-    beforeImage: 'placeholder-before-3',
-    afterImage: 'placeholder-after-3',
+    beforeImage: 'placeholder',
+    afterImage: 'placeholder',
     isReal: false,
     category: 'turf'
   }
 ];
+
+const AFTER_GRADIENTS: Record<string, string> = {
+  turf: 'from-sage-green to-forest-green',
+  waterfall: 'from-water-blue to-forest-green',
+  landscape: 'from-sage-green to-desert-gold',
+};
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  services: string[];
+  beforeImage: string;
+  afterImage: string;
+  isReal: boolean;
+  category: string;
+}
+
+function SliderImage({
+  project,
+  which,
+}: {
+  project: Project;
+  which: 'before' | 'after';
+}) {
+  if (project.isReal) {
+    return (
+      <Image
+        src={which === 'before' ? project.beforeImage : project.afterImage}
+        alt={`${which === 'before' ? 'Before' : 'After'} — ${project.title}`}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        draggable={false}
+      />
+    );
+  }
+  const gradient =
+    which === 'after'
+      ? AFTER_GRADIENTS[project.category] ?? 'from-sage-green to-forest-green'
+      : 'from-slate to-charcoal';
+  return <div className={`absolute inset-0 bg-gradient-to-br ${gradient}`} />;
+}
+
+function BeforeAfterSlider({ project }: { project: Project }) {
+  const [sliderPos, setSliderPos] = useState(50);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+
+  const updatePos = useCallback((clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const pct = Math.min(100, Math.max(0, ((clientX - rect.left) / rect.width) * 100));
+    setSliderPos(pct);
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg mb-6 select-none cursor-col-resize touch-none"
+      onMouseDown={(e) => { isDragging.current = true; updatePos(e.clientX); }}
+      onMouseMove={(e) => { if (isDragging.current) updatePos(e.clientX); }}
+      onMouseUp={() => { isDragging.current = false; }}
+      onMouseLeave={() => { isDragging.current = false; }}
+      onTouchStart={(e) => updatePos(e.touches[0].clientX)}
+      onTouchMove={(e) => updatePos(e.touches[0].clientX)}
+    >
+      {/* After image — always full width behind */}
+      <div className="absolute inset-0">
+        <SliderImage project={project} which="after" />
+      </div>
+
+      {/* Before image — clipped to left portion */}
+      <div
+        className="absolute inset-0"
+        style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+      >
+        <SliderImage project={project} which="before" />
+      </div>
+
+      {/* Divider line + handle */}
+      <div
+        className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-20 pointer-events-none"
+        style={{ left: `${sliderPos}%`, transform: 'translateX(-50%)' }}
+      >
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center">
+          <GripVertical className="w-5 h-5 text-forest-green" />
+        </div>
+      </div>
+
+      {/* Labels */}
+      <div className="absolute top-4 left-4 z-10 pointer-events-none">
+        <Badge variant="secondary" size="lg">Before</Badge>
+      </div>
+      <div className="absolute top-4 right-4 z-10 pointer-events-none">
+        <Badge variant="success" size="lg">After</Badge>
+      </div>
+
+      {/* Placeholder notice */}
+      {!project.isReal && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+          <div className="bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full whitespace-nowrap">
+            Photos coming soon
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function BeforeAfterShowcase() {
   return (
@@ -61,69 +170,7 @@ export default function BeforeAfterShowcase() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         {BEFORE_AFTER_PROJECTS.map((project) => (
           <div key={project.id}>
-            <div className="relative rounded-xl overflow-hidden shadow-lg mb-6">
-              <div className="grid grid-cols-2 gap-0">
-                {/* Before */}
-                <div className="relative">
-                  {project.isReal ? (
-                    <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
-                      <Image
-                        src={project.beforeImage}
-                        alt={`Before - ${project.title}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 50vw, 200px"
-                      />
-                    </div>
-                  ) : (
-                    <PlaceholderImage
-                      category={project.category as any}
-                      aspectRatio="4:3"
-                      showOverlay={false}
-                      className="rounded-none"
-                    />
-                  )}
-                  <div className="absolute top-4 left-4 z-10">
-                    <Badge variant="secondary" size="lg">Before</Badge>
-                  </div>
-                  <div className="absolute inset-0 bg-black/10 mix-blend-color" />
-                </div>
-
-                {/* After */}
-                <div className="relative">
-                  {project.isReal ? (
-                    <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
-                      <Image
-                        src={project.afterImage}
-                        alt={`After - ${project.title}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 50vw, 200px"
-                      />
-                    </div>
-                  ) : (
-                    <PlaceholderImage
-                      category={project.category as any}
-                      aspectRatio="4:3"
-                      showOverlay={false}
-                      className="rounded-none"
-                    />
-                  )}
-                  <div className="absolute top-4 right-4 z-10">
-                    <Badge variant="success" size="lg">After</Badge>
-                  </div>
-                </div>
-              </div>
-
-              {/* Overlay label for placeholders only */}
-              {!project.isReal && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full">
-                    Photos coming soon
-                  </div>
-                </div>
-              )}
-            </div>
+            <BeforeAfterSlider project={project} />
 
             {/* Project Details */}
             <div>
