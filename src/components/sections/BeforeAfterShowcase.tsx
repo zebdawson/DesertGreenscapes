@@ -130,11 +130,17 @@ function BeforeAfterSlider({ project }: { project: Project }) {
         </div>
       </div>
 
-      {/* Labels */}
-      <div className="absolute top-4 left-4 z-10 pointer-events-none">
+      {/* Labels — anchored to slider position, vertically centered */}
+      <div
+        className="absolute top-1/2 -translate-y-1/2 z-30 pointer-events-none"
+        style={{ left: `${sliderPos}%`, transform: `translateX(calc(-100% - 12px)) translateY(-50%)` }}
+      >
         <Badge variant="secondary" size="lg">Before</Badge>
       </div>
-      <div className="absolute top-4 right-4 z-10 pointer-events-none">
+      <div
+        className="absolute top-1/2 -translate-y-1/2 z-30 pointer-events-none"
+        style={{ left: `${sliderPos}%`, transform: `translateX(12px) translateY(-50%)` }}
+      >
         <Badge variant="success" size="lg">After</Badge>
       </div>
 
