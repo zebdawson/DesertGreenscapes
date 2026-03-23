@@ -1,0 +1,19 @@
+{
+  "name": "drive-to-youtube-uploader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automates uploading videos from Google Drive to YouTube for Desert Greenscapes",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "auth": "tsx src/auth.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "googleapis": "^140.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  }
+}

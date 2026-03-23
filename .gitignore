@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# drive-to-youtube automation
+scripts/drive-to-youtube/node_modules/
+scripts/drive-to-youtube/state/processed-videos.json
